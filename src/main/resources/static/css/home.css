@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+
+@font-face {
+    font-family: marioFont;
+    src: url(../SuperMario256.ttf);
+    font-weight: normal;
+}
+:root {
+    /* Mario Colors */
+    --red: #E52521;
+    --yellow: #FBD000;
+    --black: #000000;
+    --white: #FFFFFF;
+    --green: #43B047;
+    --blue: #049CD8;
+    --chat-height: 750px;
+}
+
+body {
+    background-color: grey;
+    margin: 0px;
+    padding: 0px;
+    font-family: marioFont;
+}
+
+.container {
+    display:inline-block;
+    width: 100%
+}
+
+.column {
+    display: inline-block;
+    width: 150px;
+    height: var(--chat-height);
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    /* padding-top: 50px; */
+    margin-top: 58px;
+}
+
+.image_left_column {
+    background-color: var(--blue);
+    left: 0px;
+}
+
+.image_right_column {
+    background-color: var(--green);
+    right: 0px
+}
+
+main {
+    background-color: var(--yellow);
+    margin: auto;
+    width: 600px;
+    height: var(--chat-height);
+    position: relative;
+}
+
+.welcome_title {
+    color: var(--red);
+    text-align: center;
+    background-color: var(--black);
+    margin: 0px;
+    padding: 10px 0px;
+}
+/* Move form to the bottom of the screen */
+form {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    color: var(--white);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.msg {
+    display: inline;
+    height: 100%; 
+    border: none;
+    color: var(--black);
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.msg_textbox {
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+    padding-left: 20px;
+}
+
+.msg_btn_send {
+    width: 11%;
+    color: white;
+    background-color: var(--black);
+}
+
+.chat_container {
+    height: calc(var(--chat-height) - 50px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 20px;
+    padding: 20px;
+}
