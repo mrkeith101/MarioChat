@@ -1,11 +1,14 @@
 package com.mariochat.MarioChat.chat;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import java.util.ArrayList;
 
@@ -19,6 +22,8 @@ public class ChatController {
     @GetMapping
     String marioChatImages(Model model){
         model.addAttribute("images", mario_images);
+        System.out.println("GetMapping");
+        model.addAttribute("messages", messages);
         return "home";
     }
 
@@ -30,5 +35,10 @@ public class ChatController {
         model.addAttribute("messages", messages);
         return "home";
     }
-
+    @DeleteMapping("/clearchat")
+    ResponseEntity<String> clearChat(Model model){
+        System.out.println("Delete Mapping");
+        messages.clear();
+        return new ResponseEntity<>("Delete Successful", HttpStatus.OK);
+    }
 }

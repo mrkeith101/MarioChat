@@ -30,6 +30,7 @@
             </section>
             
             <!-- Allow users to send a message -->
+            <button class="btn-clear" id="clear-btn" type="button"><b>Clear Chat</b></button>
             <form action="." method="POST">  
                 <input class="msg msg_textbox" type="text" name="message" placeholder="Type a message...">
                 <input class="msg msg_btn_send" type="submit" value="Send">
@@ -48,7 +49,7 @@
     <!--<img src="mario_64_ds_mario_face.png" width="100" height="100">-->
     <!--<img src="super_mario_world_mario.jpg" width="50" height="100">-->
     <!--<img src="paper_mario.png" width="100" height="100">-->
-
+    <script th:src="@{/js/home.js}"></script>
 </body>
 
 </html>

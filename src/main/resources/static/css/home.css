@@ -104,3 +104,26 @@ form {
     font-size: 20px;
     padding: 20px;
 }
+
+
+.btn-clear {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    border-radius: 20px;
+}
+
+/* make button dark red when clicked*/
+.btn-clear:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.btn-clear:active {
+    background-color: var(--red);
+}
